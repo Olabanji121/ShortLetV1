@@ -1,7 +1,8 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 
-dotenv.config({path: './.env.development.local'})
+dotenv.config({path: './client/.env.development.local'})
+// dotenv.config({path: './.env.development.local'})
 
 const db = process.env.MONGOURI
 
@@ -10,7 +11,7 @@ const connectDB = async()=>{
         await mongoose.connect(db,{
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
+            useFindAndModify: false,  
             useCreateIndex: true,
         })
 

@@ -6,7 +6,7 @@ const userRoute = require('./routes/userRoute')
 const bookRoute = require('./routes/bookRoute')
 const path = require('path')
 
-dotenv.config({path: './.env.development.local'})
+dotenv.config({path: './client/.env.development.local'})
 
 const app = express()
 
@@ -16,7 +16,7 @@ app.use(cors())
 app.use(express.json({extended: false}))
 
 // mount route
-app.use('/api/v1/book', bookRoute)
+app.use('/api/v1/book', bookRoute) 
 app.use('/api/v1/users', userRoute)
 
 // Sever Static Assets  in production

@@ -58,7 +58,7 @@ class RoomProvider extends Component {
     // change state
     this.setState({
       sortedRooms: tempRooms
-    });
+    }); 
   };
   // getData
   getData = async () => {
