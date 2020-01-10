@@ -35,7 +35,7 @@ const AuthState = props => {
 
     try {
       const res = await axios.get(
-        "http://localhost:7070/api/v1/users/getloginUser"
+        "/api/v1/users/getloginUser"
       );
 
       dispatch({
@@ -59,7 +59,7 @@ const AuthState = props => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7070/api/v1/users/signup",
+        "/api/v1/users/signup",
         formData,
         config
       );
@@ -89,7 +89,7 @@ const AuthState = props => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7070/api/v1/users/login",
+        "/api/v1/users/login",
         formData,
         config
       );

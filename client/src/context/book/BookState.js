@@ -23,7 +23,7 @@ const BookState = props => {
 
     try {
       const res = await axios.post(
-        "http://localhost:7070/api/v1/book/booking",
+        "/api/v1/book/booking",
         formData,
         config
       );
