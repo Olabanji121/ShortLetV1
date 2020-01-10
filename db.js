@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 
-dotenv.config({path: './client/.env.development.local'})
+dotenv.config({path: './.env.development.local'})
 
 const db = process.env.MONGOURI
 
@@ -16,7 +16,7 @@ const connectDB = async()=>{
 
         console.log("MongoDB connected...");
         
-    } catch (err) {
+    } catch (err) { 
         console.error(err.message);
         //   exit process with failure
         process.exit(1);

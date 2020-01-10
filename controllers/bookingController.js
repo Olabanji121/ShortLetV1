@@ -52,7 +52,7 @@ exports.getbook = async(req, res)=>{
 
   res.status(200).json({
     status: "success",
-    NumOFclasses:  bookings.length,
+    NumOFBookings:  bookings.length,
     data: {
       bookings
     }

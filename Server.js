@@ -6,7 +6,7 @@ const userRoute = require('./routes/userRoute')
 const bookRoute = require('./routes/bookRoute')
 const path = require('path')
 
-dotenv.config({path: './client/.env.development.local'})
+dotenv.config({path: './.env.development.local'})
 
 const app = express()
 
@@ -22,9 +22,9 @@ app.use('/api/v1/users', userRoute)
 // Sever Static Assets  in production
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('../ShortLet/build'))
+    app.use(express.static('client/build'))
 
-    app.get('*', (req,res)=> res.sendFile(path.resolve))
+    app.get('*', (req,res)=> res.sendFile(path.resolve(__dirname, 'client', "build", 'index.html')));
 }
 
 
