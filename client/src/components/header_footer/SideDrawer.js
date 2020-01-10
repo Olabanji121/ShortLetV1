@@ -30,7 +30,7 @@ const SideDrawer = ({ closeDrawer, onClose }) => {
       <ListItem button>
         <Link onClick={onLogout} to="#!" className="text-uppercase link text-dark">
           <i className="fas fa-sign-out-alt"></i>
-          <span className="hide-sm">Log out</span>
+          <span >Log out</span>
         </Link>
       </ListItem>
     </Fragment>
