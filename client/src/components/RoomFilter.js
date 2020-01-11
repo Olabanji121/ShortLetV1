@@ -22,6 +22,7 @@ const RoomFilter = ({ rooms }) => {
     location,
     handleChange
   } = context;
+  
   //   types///
   //   get unique types
   let types = getUnique(rooms, "type");

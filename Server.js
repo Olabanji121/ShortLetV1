@@ -15,15 +15,17 @@ connectDB();
 app.use(cors())
 app.use(express.json({extended: false}))
 
+// Serve Static Assets  in production
+
+app.use(express.static(path.join(__dirname, 'client/build')))
+
+app.get('/*', (req,res)=> {res.sendFile(path.resolve(__dirname, '/client/build', 'index.html'))})
+
+
 // mount route
 app.use('/api/v1/book', bookRoute) 
 app.use('/api/v1/users', userRoute)
 
-// Sever Static Assets  in production
-
-    app.use(express.static(path.join(__dirname, 'client/build')))
-
-    app.get('/*', (req,res)=> {res.sendFile(path.resolve(__dirname, '/client/build', 'index.html'))})
 
 
 

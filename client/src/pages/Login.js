@@ -38,7 +38,7 @@ const Login = (props) => {
 
     login({email, password})
     
-    console.log(user);
+    
   };
 
   const handleChange = e => {
