@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/signup', authController.signup)
 router.post('/login', authController.login)    
-// router.get('/getloginUser', authController.protect, authController.getUser)    
+router.get('/getloginUser', authController.protect, authController.getUser)    
 
 
 module.exports = router;    
