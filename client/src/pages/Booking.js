@@ -77,7 +77,7 @@ const Booking = props => {
     if (terms === false) {
       return alert("Please indicate that you accept the Terms and Conditions");
     } else { 
-      console.log(book);
+      // console.log(book);
       document.getElementById("btnId").disabled = 'true';
       setBook({
         ...book, loading: true
