@@ -52,7 +52,6 @@ const Booking = props => {
     taxi: false,
     cleaning: false,
     terms: false,
-    roomname: "",
     loading: false,
   });
 
@@ -67,7 +66,6 @@ const Booking = props => {
     taxi,
     cleaning,
     terms,
-    roomname,
     loading
   } = book;
 
@@ -78,8 +76,8 @@ const Booking = props => {
 
     if (terms === false) {
       return alert("Please indicate that you accept the Terms and Conditions");
-    } else {
-      // console.log(book);
+    } else { 
+      console.log(book);
       document.getElementById("btnId").disabled = 'true';
       setBook({
         ...book, loading: true
@@ -98,7 +96,7 @@ const Booking = props => {
       taxi,
       cleaning,
       terms,
-      roomname
+      
     });
 
     
@@ -118,6 +116,7 @@ const Booking = props => {
 
   const { name, capacity, price, images } = room;
 
+ 
   return (
     <BookHero
       img={images[3]}
@@ -172,20 +171,6 @@ const Booking = props => {
           >
             <Form onSubmit={handleSubmit} className="ui form">
               <div className="field ">
-                <Form.Field>
-                  <label htmlFor="roomname">Room Name :</label>
-                  <input
-                    type="text"
-                    id="roomname"
-                    value={name}
-                    onChange={e =>
-                      setBook({
-                        ...book,
-                        roomname: name
-                      })
-                    }
-                  />
-                </Form.Field>
                 <Form.Field>
                   <label htmlFor="fullname">Full Name :</label>
                   <input

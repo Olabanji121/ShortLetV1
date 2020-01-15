@@ -37,7 +37,7 @@ const BookSchema = new mongoose.Schema({
 
   city: {
     type: Boolean,
-    required: true
+    
   },
   more: {
     type: String,
@@ -46,20 +46,17 @@ const BookSchema = new mongoose.Schema({
 
   taxi: {
     type: Boolean,
-    required: true
+    
   },
   cleaning: {
     type: Boolean,
-    required: true
+   
   },
   terms: {
     type: Boolean,
     required: true
   },
-  roomname: {
-    type: String,
-    required: true
-  },
+  
 
   active: {
     type: Boolean,
